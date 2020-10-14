@@ -141,18 +141,30 @@ Se configuran las direcciones ips para los host bajo el formato de la tabla esta
 ### ENCAPSULACIÓN EN ROUTER 
 
 Para encapsular las vlans utilizaremos los siguientes comandos en la consola del router:
-`conf t`  
-`int f0/0.10`
-`encapsulation dot1q 10`
-`ip address 192.168.17.254 255.255.255.0`
-`end`
-`wr`
-`conf t`  
-`int f0/0.20`
-`encapsulation dot1q 20`
-`ip address 192.168.27.254 255.255.255.0`
-`end`
-`wr`  
+`conf t`   
+
+`int f0/0.10` 
+
+`encapsulation dot1q 10` 
+
+`ip address 192.168.17.254 255.255.255.0` 
+
+`end` 
+
+`wr` 
+
+`conf t`   
+
+`int f0/0.20` 
+
+`encapsulation dot1q 20` 
+
+`ip address 192.168.27.254 255.255.255.0` 
+
+`end` 
+
+`wr`   
+
 
 <img src="/xdxd/Captura12.PNG" alt="drawing" width="600"/>
 
@@ -160,50 +172,50 @@ Para encapsular las vlans utilizaremos los siguientes comandos en la consola del
 ### CONFIGURACION Y CREACIÓN DE PORT-CHANNEL
 
 o Po1: entre ESW1 y ESW2  
-Para la configuración del port-channel 1 utilizaremos los siguientes comandos en la consola del ESW1:
-`conf t`
-`interfaces range f1/0-1`
-`channel-group 1 mode on`
+Para la configuración del port-channel 1 utilizaremos los siguientes comandos en la consola del ESW1:  
+`conf t`  
+`interfaces range f1/0-1`  
+`channel-group 1 mode on`  
 `end`
 
-Y los siguientes comandos en la consola del ESW2:
-`conf t`
-`interfaces range f1/0-1`
-`channel-group 1 mode on`
+Y los siguientes comandos en la consola del ESW2:  
+`conf t`  
+`interfaces range f1/0-1`  
+`channel-group 1 mode on`  
 `end`  
 
-<img src="/xdxd/poo.PNG" alt="drawing" width="600"/>
+<img src="/xdxd/poo.png" alt="drawing" width="600"/>
 
 o Po2: entre ESW1 y ESW3  
-Para la configuración del port-channel 2 utilizaremos los siguientes comandos en la consola del ESW1:
-`conf t`
-`interfaces range f1/2-3`
-`channel-group 2 mode on`
+Para la configuración del port-channel 2 utilizaremos los siguientes comandos en la consola del ESW1:  
+`conf t`  
+`interfaces range f1/2-3`  
+`channel-group 2 mode on`  
 `end`
 
-Y los siguientes comandos en la consola del ESW3:
-`conf t`
-`interfaces range f1/2-3`
-`channel-group 2 mode on`
+Y los siguientes comandos en la consola del ESW3:  
+`conf t`  
+`interfaces range f1/2-3`  
+`channel-group 2 mode on`  
 `end`
   
   
-<img src="/xdxd/poo2.PNG" alt="drawing" width="600"/>
+<img src="/xdxd/poo2.png" alt="drawing" width="600"/>
 
 o Po3: entre ESW2 y ESW3  
-Para la configuración del port-channel 2 utilizaremos los siguientes comandos en la consola del ESW2:
-`conf t`
-`interfaces range f1/4-5`
-`channel-group 3 mode on`
+Para la configuración del port-channel 2 utilizaremos los siguientes comandos en la consola del ESW2:  
+`conf t`  
+`interfaces range f1/4-5`  
+`channel-group 3 mode on`  
 `end`
 
-Y los siguientes comandos en la consola del ESW3:
-`conf t`
-`interfaces range f1/4-5`
-`channel-group 3 mode on`
+Y los siguientes comandos en la consola del ESW3:  
+`conf t`  
+`interfaces range f1/4-5`  
+`channel-group 3 mode on`  
 `end`  
 
-<img src="/xdxd/poo3.PNG" alt="drawing" width="600"/>
+<img src="/xdxd/poo3.png" alt="drawing" width="600"/>
 
 
 
