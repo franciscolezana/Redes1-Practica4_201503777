@@ -228,7 +228,7 @@ Y los siguientes comandos en la consola del ESW3:
 1. **sh spanning-tree root** desde el esw1 
 <img src="/xdxd/root.png" alt="drawing" width="600"/>
 
-1. **sh spa block**
+2. **sh spa block**
 
 <img src="/xdxd/block1.png" alt="drawing" width="600"/>
 
