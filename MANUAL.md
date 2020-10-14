@@ -7,21 +7,28 @@
 **CURSO**: REDES DE COMPUTADORAS 1
 
 # MANUAL DE CONFIGURACIÓN
+A continuación se detallan las configuraciones necesarias para administrar de forma correcta la red y proveer comunicación de acuerdo a las necesidades indicadas.
 
 ## HERRAMIENTAS A UTILIZAR 
-
 - GNS3
 - Software de virtualización (VMWare o Virtual Box) instalados y configurado para uso con GNS3.
 - Software para captura de datos 
 
 ## TOPOLOGIA DE RED DEL PROYECTO 
+Se busca crear una red pequeña conformada por 4 computadoras distribuidas en dos departamentos, en la cual los dispositivos este conectados y pueden comunicarse unicamente entre departamentos. La topología de la practica consta de los siguientes elementos:
+* 4 Máquinas
+    * 3 VPC
+    * 1 VM (Configurada con Tiny Linux)
+* 2 Switch
+* 2 EthernetSwitch Router (ESW)
+* 1 Router
+* Cables de red
 
-La siguiente topología cuenta con 4 host de los cuales 3 son VPCS y 1 es una máquina virtual con un sistema tiny-linux para ahorrar recursos, podemos observar que los host se conectan a 2 switches distintos y estos se conectan a 3 EtherSwitch routers y estos a su vez se conectan a un router el cuál será centro principal de comunicación.  
 <img src="/xdxd/topologia.PNG" alt="drawing" width="600"/>
 
 ## CONFIGURACIÓN DE LA TOPOLOGÍA DE RED EN GNS3
 
-### DIRECCIONES IP DE LOS HOST
+### DIRECCIONES IP DE LOS HOST E INTERFACES CONECTADAS
 
 Las direcciones de red son las siguientes 192.168.1X.0/24 y 192.168.2X.0/24. Donde X es el último dígito del carné, en este caso el número 7.
 
@@ -33,7 +40,6 @@ Las direcciones ips de los hosts están dados en la siguiente tabla:
 | 2    | NO     | 192.168.27.10  | 255.255.255.0   | 20 |
 | 3    | NO     | 192.168.17.15  | 255.255.255.0   | 10 |
 | 4    | NO     | 192.168.27.15  | 255.255.255.0   | 20 |
-
 
 
 ### CONFIGURACIÓN DE MODO ACCESO Y MODO TRONCAL
@@ -218,7 +224,15 @@ Y los siguientes comandos en la consola del ESW3:
 <img src="/xdxd/poo3.png" alt="drawing" width="600"/>
 
 
+## SPANNING TREE
+1. **sh spanning-tree root** desde el esw1 
+<img src="/xdxd/root.png" alt="drawing" width="600"/>
 
+1. **sh spa block**
+
+<img src="/xdxd/block1.png" alt="drawing" width="600"/>
+
+<img src="/xdxd/block2.png" alt="drawing" width="600"/>
 
 
 
