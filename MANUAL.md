@@ -26,6 +26,10 @@ Se busca crear una red pequeña conformada por 4 computadoras distribuidas en do
 
 <img src="/xdxd/topologia.PNG" alt="drawing" width="600"/>  
 
+
+## TOPOLOGIA DE RED DEL PROYECTO SIMPLIFICADA
+<img src="/xdxd/topot2.png" alt="drawing" width="600"/>  
+
 ## CONFIGURACIÓN DE LA TOPOLOGÍA DE RED EN GNS3
 
 ### DIRECCIONES IP DE LOS HOST E INTERFACES CONECTADAS
