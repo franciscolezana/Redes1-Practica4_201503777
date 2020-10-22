@@ -24,7 +24,10 @@ Se busca crear una red pequeña conformada por 4 computadoras distribuidas en do
 * 1 Router
 * Cables de red
 
-<img src="/xdxd/topologia.PNG" alt="drawing" width="600"/>
+<img src="/xdxd/topologia.PNG" alt="drawing" width="600"/>  
+
+## TOPOLOGIA DE RED DEL PROYECTO  SIMPLIFICADA
+<img src="/xdxd/topologiasimp.PNG" alt="drawing" width="600"/>
 
 ## CONFIGURACIÓN DE LA TOPOLOGÍA DE RED EN GNS3
 
@@ -236,4 +239,8 @@ Y los siguientes comandos en la consola del ESW3:
 
 
 
+## CAPTURA DE PAQUETES
+
+
+<img src="/xdxd/image.png" alt="drawing" width="600"/>
 
